@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kettle.web_kettle.mapper.KettleDatabaseMapper">
+    <resultMap id="KettleDatabase" type="kettle.web_kettle.pojo.KettleDatabase">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="CHAR" property="name"/>
+        <result column="object_id" jdbcType="INTEGER" property="objectId"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="type" jdbcType="CHAR" property="type"/>
+        <result column="database" jdbcType="CHAR" property="database"/>
+        <result column="part" jdbcType="CHAR" property="part"/>
+        <result column="url" jdbcType="CHAR" property="url"/>
+        <result column="password" jdbcType="CHAR" property="password"/>
+        <result column="user" jdbcType="CHAR" property="user"/>
+    </resultMap>
+    <select id="selectTest" resultType="kettle.web_kettle.pojo.KettleDatabase">
+        select * from kettle_database
+    </select>
+</mapper>
